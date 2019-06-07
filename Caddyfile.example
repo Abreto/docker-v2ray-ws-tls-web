@@ -1,4 +1,5 @@
 [HOST] {
+  log stdout
   root /srv
   proxy /theory v2ray:8008 {
     websocket
