@@ -1,4 +1,4 @@
-[HOST] {
+[HOST]:443 {
   log stdout
   root /srv
   tls /private/cert.pem /private/key.pem
