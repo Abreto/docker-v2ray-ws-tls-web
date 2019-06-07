@@ -8,4 +8,4 @@ $ ./configure <UUID> <Host>
 $ sudo docker-compose up -d
 ```
 
-Then connect to https://<Host>:443 via vmess over ws.
+Then connect to `https://<Host>:443` via vmess over ws.
