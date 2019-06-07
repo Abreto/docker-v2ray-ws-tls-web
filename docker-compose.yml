@@ -19,6 +19,8 @@ services:
     volumes:
       - ./config.server.json:/etc/v2ray/config.json
     restart: always
+    depends_on:
+      - ntpd
   ntpd:
     image: abreto/ntpd
     cap_add:
