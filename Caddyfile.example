@@ -3,7 +3,7 @@
 }
 
 [HOST]:443 {
-  log stdout
+  log / stdout "{combined}"
   root /srv
   tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
