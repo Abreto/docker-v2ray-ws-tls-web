@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    image: abreto/caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./public:/srv
+      - ./Caddyfile:/etc/Caddyfile
+    depends_on:
+      - v2ray
+  v2ray:
+    image: abreto/v2ray
+    volumes:
+      - ./config.server.json:/etc/v2ray/config.json

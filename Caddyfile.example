@@ -1,0 +1,8 @@
+[HOST] {
+  push
+  root /srv
+  proxy /theory v2ray:2019 {
+    websocket
+    header_upstream -Origin
+  }
+}

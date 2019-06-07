@@ -1,0 +1,22 @@
+{
+  "inbounds": [{
+    "port": 2019,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [{
+        "id": "[UUID]",
+        "alterId": 64
+      }],
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/theory"
+        }
+      }
+    }
+  }],
+  "outbunds": [{
+    "protocol": "freedom",
+    "settings": {}
+  }]
+}
