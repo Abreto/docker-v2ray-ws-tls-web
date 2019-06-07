@@ -6,7 +6,7 @@
   log / stdout "{combined}"
   root /srv
   tls /private/cert.pem /private/key.pem
-  proxy /theory v2ray:8008 {
+  proxy /theory http://v2ray:8008 {
     # websocket {
     header_upstream Connection upgrade
     header_upstream Upgrade {>Upgrade}
