@@ -1,6 +1,6 @@
 {
   "inbounds": [{
-    "port": 2019,
+    "port": 8008,
     "protocol": "vmess",
     "settings": {
       "clients": [{
