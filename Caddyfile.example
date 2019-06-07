@@ -7,8 +7,11 @@
   root /srv
   tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
-    websocket
-    transparent
+    # websocket {
+    header_upstream Connection {>Connection}
+    header_upstream Upgrade "upgrade"
+    # }
+    header_upstream Host {>Host}
     header_upstream -Origin
   }
 }
