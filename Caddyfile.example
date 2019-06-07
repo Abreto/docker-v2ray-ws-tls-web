@@ -1,7 +1,7 @@
 [HOST] {
   log stdout
   root /srv
-  # tls /private/cert.pem /private/key.pem
+  tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
     websocket
     header_upstream -Origin
