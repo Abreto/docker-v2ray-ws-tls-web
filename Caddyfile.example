@@ -14,7 +14,7 @@
     # header_upstream Upgrade {>Upgrade}
     # }
     websocket
-    header_upstream Host {>Host}
+    transparent
     header_upstream -Origin
   }
 }

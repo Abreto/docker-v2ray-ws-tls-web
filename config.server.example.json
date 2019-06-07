@@ -10,14 +10,14 @@
       "clients": [{
         "id": "[UUID]",
         "alterId": 4
-      }],
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/theory",
-          "headers": {
-            "Host": "[HOST]"
-          }
+      }]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/theory",
+        "headers": {
+          "Host": "[HOST]"
         }
       }
     }
