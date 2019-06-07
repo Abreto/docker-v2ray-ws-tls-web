@@ -1,3 +1,5 @@
 Caddyfile
 config.client.json
 config.server.json
+private/cert.pem
+private/key.pem
