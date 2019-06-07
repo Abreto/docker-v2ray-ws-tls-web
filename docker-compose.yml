@@ -2,15 +2,19 @@ version: '3'
 services:
   web:
     image: abreto/caddy
+    container_name: web
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./public:/srv
       - ./Caddyfile:/etc/Caddyfile
+    restart: always
     depends_on:
       - v2ray
   v2ray:
     image: abreto/v2ray
+    container_name: v2ray
     volumes:
       - ./config.server.json:/etc/v2ray/config.json
+    restart: always
