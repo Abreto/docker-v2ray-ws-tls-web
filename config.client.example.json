@@ -13,7 +13,7 @@
     }
   }],
   "outbounds": [{
-    "protocel": "vmess",
+    "protocol": "vmess",
     "settings": {
       "vnext": [{
         "address": "[HOST]",
