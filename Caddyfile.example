@@ -8,6 +8,7 @@
   tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
     websocket
+    transparent
     header_upstream -Origin
   }
 }
