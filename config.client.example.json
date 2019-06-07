@@ -10,7 +10,8 @@
     "settings": {
       "auth": "noauth",
       "udp": false
-    }
+    },
+    "tag": "IN-[HOST]"
   }],
   "outbounds": [{
     "protocol": "vmess",
@@ -28,7 +29,8 @@
     "streamSettings": {
       "network": "ws",
       "security": "tls"
-    }
+    },
+    "tag": "OUT-[HOST]"
   }],
   "transport": {
     "wsSettings": {
@@ -37,5 +39,12 @@
         "Host": "[HOST]"
       }
     }
+  },
+  "routing": {
+    "rules": [{
+      "type": "field",
+      "inboundTags": [ "IN-[HOST]" ],
+      "outboundTag": "OUT-[HOST]"
+    }]
   }
 }
