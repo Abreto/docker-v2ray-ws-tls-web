@@ -20,7 +20,8 @@
         "port": 443,
         "users": [{
           "id": "[UUID]",
-          "alterId": 4
+          "alterId": 4,
+          "security": "auto"
         }]
       }]
     },
