@@ -19,3 +19,9 @@ services:
     volumes:
       - ./config.server.json:/etc/v2ray/config.json
     restart: always
+  ntpd:
+    image: abreto/ntpd
+    cap_add:
+      - SYS_TIME
+      - SYS_NICE
+    restart: always
