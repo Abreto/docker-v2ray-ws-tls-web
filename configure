@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-if [ "$1" == "" ] || [ "$2" == "" ]; then
+if [ -z "$1" ] || [ -z "$2" ]; then
   echo
   echo "Usage: ./configure <UUID> <host>"
   echo
