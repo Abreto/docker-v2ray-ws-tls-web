@@ -27,3 +27,5 @@ services:
       - SYS_TIME
       - SYS_NICE
     restart: always
+    volumes:
+      - ./ntpd.conf:/etc/ntpd.conf
