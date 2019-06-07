@@ -8,8 +8,8 @@
   tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
     # websocket {
-    header_upstream Connection {>Connection}
-    header_upstream Upgrade "upgrade"
+    header_upstream Connection "upgrade"
+    header_upstream Upgrade {>Upgrade}
     # }
     header_upstream Host {>Host}
     header_upstream -Origin
