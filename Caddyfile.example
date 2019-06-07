@@ -1,11 +1,6 @@
-[HOST]:80 {
-  redir https://{host}{uri}
-}
-
-[HOST]:443 {
+[HOST] {
   log / stdout "{combined}"
   root /srv
-  tls /private/cert.pem /private/key.pem
   proxy /theory v2ray:8008 {
     websocket
     transparent
