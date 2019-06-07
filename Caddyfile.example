@@ -5,7 +5,9 @@
 [HOST]:443 {
   log / stdout "{combined}"
   root /srv
-  tls /private/cert.pem /private/key.pem
+  tls /private/cert.pem /private/key.pem {
+    alpn http/1.1
+  }
   proxy /theory http://v2ray:8008 {
     # websocket {
     header_upstream Connection upgrade
