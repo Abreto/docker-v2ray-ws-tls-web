@@ -9,7 +9,7 @@
     "settings": {
       "clients": [{
         "id": "[UUID]",
-        "alterId": 64
+        "alterId": 4
       }],
       "streamSettings": {
         "network": "ws",
