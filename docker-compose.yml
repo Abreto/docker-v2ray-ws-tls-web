@@ -9,6 +9,8 @@ services:
     volumes:
       - ./public:/srv
       - ./Caddyfile:/etc/Caddyfile
+    environment:
+      - ACME_AGREE=true
     restart: always
     depends_on:
       - v2ray
