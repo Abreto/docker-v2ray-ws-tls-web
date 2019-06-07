@@ -1,6 +1,7 @@
 [HOST] {
   log stdout
   root /srv
+  tls noreply@example.com
   proxy /theory v2ray:8008 {
     websocket
     header_upstream -Origin
