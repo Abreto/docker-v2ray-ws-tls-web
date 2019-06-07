@@ -15,7 +15,9 @@
         "network": "ws",
         "wsSettings": {
           "path": "/theory",
-          "headers": {}
+          "headers": {
+            "Host": "[HOST]"
+          }
         }
       }
     }

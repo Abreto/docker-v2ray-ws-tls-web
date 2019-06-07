@@ -10,9 +10,10 @@
   }
   proxy /theory http://v2ray:8008 {
     # websocket {
-    header_upstream Connection upgrade
-    header_upstream Upgrade {>Upgrade}
+    # header_upstream Connection upgrade
+    # header_upstream Upgrade {>Upgrade}
     # }
+    websocket
     header_upstream Host {>Host}
     header_upstream -Origin
   }

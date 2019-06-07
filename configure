@@ -9,7 +9,7 @@ fi
 
 
 # $1 is UUID, $2 is HOST
-sed "s/\[UUID\]/$1/g" config.server.example.json > config.server.json
+sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.server.example.json > config.server.json
 
 sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.client.example.json > config.client.json
 
