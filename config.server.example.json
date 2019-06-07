@@ -22,7 +22,7 @@
       }
     }
   }],
-  "outbunds": [{
+  "outbounds": [{
     "protocol": "freedom",
     "settings": {}
   }]
