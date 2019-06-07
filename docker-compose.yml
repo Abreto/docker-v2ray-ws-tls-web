@@ -9,6 +9,7 @@ services:
     volumes:
       - ./public:/srv
       - ./Caddyfile:/etc/Caddyfile
+      - ./private:/private:ro
     restart: always
     depends_on:
       - v2ray
