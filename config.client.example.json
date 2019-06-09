@@ -34,7 +34,7 @@
   }],
   "transport": {
     "wsSettings": {
-      "path": "/theory"
+      "path": "/filesync"
     }
   },
   "routing": {

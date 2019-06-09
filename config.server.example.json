@@ -15,7 +15,7 @@
     "streamSettings": {
       "network": "ws",
       "wsSettings": {
-        "path": "/theory"
+        "path": "/filesync"
       }
     }
   }],
