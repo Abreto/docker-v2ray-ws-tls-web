@@ -10,6 +10,7 @@ services:
       - ./public:/srv
       - ./Caddyfile:/etc/Caddyfile
       - ./private:/private:ro
+    command: -default-sni [HOST]
     restart: always
     depends_on:
       - v2ray
