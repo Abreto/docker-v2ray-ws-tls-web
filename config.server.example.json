@@ -15,10 +15,7 @@
     "streamSettings": {
       "network": "ws",
       "wsSettings": {
-        "path": "/theory",
-        "headers": {
-          "Host": "[HOST]"
-        }
+        "path": "/theory"
       }
     }
   }],
