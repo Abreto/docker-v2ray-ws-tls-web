@@ -1,9 +1,7 @@
-[HOST] {
-  log / stdout "{combined}"
-  root /srv
-  proxy /theory v2ray:8008 {
-    websocket
-    transparent
-    header_upstream -Origin
-  }
+[HOST]
+log / stdout "{combined} | {scheme}://{host} {>Connection} {>Upgrade}"
+proxy / https://blog.abreto.net
+proxy /filesync v2ray:8008 {
+  websocket
+  header_upstream -Origin
 }
