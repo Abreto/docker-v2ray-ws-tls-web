@@ -2,7 +2,7 @@
   redir https://{host}{uri}
 }
 
-[HOST] {
+[HOST]:443 {
   log / stdout "{combined} | {scheme}://{host} {>Connection} {>Upgrade}"
   tls /private/cert.pem /private/key.pem
   proxy / https://blog.abreto.net
