@@ -1,7 +1,13 @@
-[HOST]
-log / stdout "{combined} | {scheme}://{host} {>Connection} {>Upgrade}"
-proxy / https://blog.abreto.net
-proxy /filesync v2ray:8008 {
-  websocket
-  header_upstream -Origin
+[HOST]:80 {
+  redir https://{host}{uri}
+}
+
+[HOST] {
+  log / stdout "{combined} | {scheme}://{host} {>Connection} {>Upgrade}"
+  tls /private/cert.pem /private/key.pem
+  proxy / https://blog.abreto.net
+  proxy /filesync v2ray:8008 {
+    websocket
+    header_upstream -Origin
+  }
 }
