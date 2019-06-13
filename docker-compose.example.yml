@@ -6,10 +6,13 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      - CADDYPATH=/.caddy
     volumes:
       - ./public:/srv
       - ./Caddyfile:/etc/Caddyfile
       - ./private:/private:ro
+      - caddyacme:/.caddy/acme
     command: -default-sni [HOST]
     restart: always
     depends_on:
@@ -30,3 +33,5 @@ services:
     restart: always
     volumes:
       - ./ntpd.conf:/etc/ntpd.conf
+volumes:
+  caddyacme:
