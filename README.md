@@ -20,6 +20,6 @@ You may need to run `docker swarm init` before.
 You can run these commands in your local computer.
 Just run
 ```sh
-export DOCKER_HOST=ssh://user@your.host:22
+export DOCKER_HOST=ssh://<user>@<your.host>:22
 ```
 before commands aforementioned.
