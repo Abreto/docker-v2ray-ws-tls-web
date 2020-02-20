@@ -1,27 +1,30 @@
 version: '3'
 services:
   web:
-    image: abreto/caddy:noagree
-    container_name: web
+    image: caddy/caddy:alpine
     ports:
       - "80:80"
       - "443:443"
     environment:
-      - CADDYPATH=/.caddy
+      - YOUR_EMAIL: [YOUR_EMAIL]
+      - HOST: [HOST]
+    configs:
+      - source: caddyfile
+        target: /etc/caddy/Caddyfile
     volumes:
-      - ./public:/srv
-      - ./Caddyfile:/etc/Caddyfile
-      - ./private:/private:ro
-      - caddyacme:/.caddy/acme
-    command: -default-sni [HOST]
+      - caddy-root-home:/root
+    deploy:
+      replicas: 1
     restart: always
     depends_on:
       - v2ray
   v2ray:
-    image: abreto/v2ray
-    container_name: v2ray
-    volumes:
-      - ./config.server.json:/etc/v2ray/config.json
+    image: v2ray/offical
+    configs:
+      - source: v2ray-server
+        target: /etc/v2ray/config.json
+    deploy:
+      replicas: 1
     restart: always
     depends_on:
       - ntpd
@@ -31,7 +34,23 @@ services:
       - SYS_TIME
       - SYS_NICE
     restart: always
-    volumes:
-      - ./ntpd.conf:/etc/ntpd.conf
+    deploy:
+      mode: global
+    configs:
+      - source: ntpd
+        target: /etc/ntpd.conf
+
+configs:
+  caddyfile:
+    file: ./Caddyfile
+  v2ray-server:
+    file: ./config.server.json
+  ntpd:
+    file: ./ntpd.conf
+
 volumes:
-  caddyacme:
+  caddy-root-home:
+
+networks:
+  default:
+    driver: overlay

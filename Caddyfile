@@ -1,0 +1,12 @@
+{
+  # email {$YOUR_EMAIL}
+  acma_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+
+{$HOST} {
+  reverse_proxy /filesync v2ray
+  reverse_proxy /* https://blog.abreto.net
+}
+
+# header_upstream -Origin
+

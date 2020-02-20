@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-if [ -z "$1" ] || [ -z "$2" ]; then
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
   echo
-  echo "Usage: ./configure <UUID> <host>"
+  echo "Usage: ./configure <UUID> <host> <your_email>"
   echo
   exit 1
 fi
@@ -13,6 +13,4 @@ sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.server.example.json > config.serve
 
 sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.client.example.json > config.client.json
 
-sed "s/\[HOST\]/$2/g" Caddyfile.example > Caddyfile
-
-sed "s/\[HOST\]/$2/g" docker-compose.example.yml > docker-compose.yml
+sed "s/\[HOST\]/$2/g; s/\[YOUR_EMAIL\]/$3/g" docker-compose.example.yml > docker-compose.yml

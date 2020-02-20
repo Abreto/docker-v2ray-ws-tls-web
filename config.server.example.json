@@ -3,13 +3,13 @@
     "loglevel": "info"
   },
   "inbounds": [{
-    "port": 8008,
+    "port": 80,
     "listen": "0.0.0.0",
     "protocol": "vmess",
     "settings": {
       "clients": [{
         "id": "[UUID]",
-        "alterId": 4
+        "alterId": 64
       }]
     },
     "streamSettings": {
