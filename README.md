@@ -8,7 +8,9 @@ Now works in [swarm mode](https://docs.docker.com/engine/swarm/).
 
 ```
 $ ./configure <UUID> <Host> <your_email>
-$ docker stack deploy -c docker-compose.yml v2ray
+$ docker stack deploy -c v2ray-stack.yml v2ray
 ```
 
 And then connect to `https://<Host>:443` via vmess over wss with `path: "/filesync"`.
+
+You may need to run `docker swarm init` before.

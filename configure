@@ -13,4 +13,4 @@ sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.server.example.json > config.serve
 
 sed "s/\[UUID\]/$1/g; s/\[HOST\]/$2/g" config.client.example.json > config.client.json
 
-sed "s/\[HOST\]/$2/g; s/\[YOUR_EMAIL\]/$3/g" docker-compose.example.yml > docker-compose.yml
+sed "s/\[HOST\]/$2/g; s/\[YOUR_EMAIL\]/$3/g" v2ray-stack.example.yml > v2ray-stack.yml
