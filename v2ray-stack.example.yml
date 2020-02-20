@@ -6,8 +6,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - YOUR_EMAIL: [YOUR_EMAIL]
-      - HOST: [HOST]
+      YOUR_EMAIL: [YOUR_EMAIL]
+      HOST: [HOST]
     configs:
       - source: caddyfile
         target: /etc/caddy/Caddyfile
