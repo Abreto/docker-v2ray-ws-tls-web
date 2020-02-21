@@ -20,7 +20,7 @@ services:
     depends_on:
       - v2ray
   v2ray:
-    image: v2ray/offical
+    image: v2ray/official
     configs:
       - source: v2ray-server
         target: /etc/v2ray/config.json

@@ -4,8 +4,8 @@
 }
 
 {$HOST} {
-  reverse_proxy /filesync v2ray
-  reverse_proxy /* https://blog.abreto.net
+  reverse_proxy /filesync v2ray:80
+  reverse_proxy /* blog.abreto.net:80
 }
 
 # header_upstream -Origin
