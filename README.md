@@ -1,3 +1,5 @@
+# DEPRECATED. Followed by [crossfire-all-in-one](https://github.com/Abreto/crossfire-all-in-one).
+
 # docker-v2ray-ws-tls-web
 Docker Compose solution: v2ray + Caddy + openntpd.
 
